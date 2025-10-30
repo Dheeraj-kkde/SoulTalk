@@ -1,17 +1,13 @@
-//
-//  SoulTalkApp.swift
-//  SoulTalk
-//
-//  Created by Dheeraj Kumar on 10/29/25.
-//
-
 import SwiftUI
 
 @main
 struct SoulTalkApp: App {
+    @StateObject private var store = AppDataStore()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(store)
         }
     }
 }
